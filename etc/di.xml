@@ -15,8 +15,10 @@
     <type name="Magento\Config\Model\Config">
         <plugin name="configPermissionChange" type="Magento\CatalogPermissions\Model\Indexer\Plugin\ConfigData" disabled="false" />
     </type>
+    <!--
     <type name="Magento\Framework\Mail\TransportInterface">  
       <plugin name="WindowsSmtpConfig" type="Magento\Email\Model\Plugin\WindowsSmtpConfig" disabled="false" />
       <plugin name="EmailDisable" type="Magento\Email\Model\Mail\TransportInterfacePlugin" disabled="false" />
     </type>
+    -->
   </config>
