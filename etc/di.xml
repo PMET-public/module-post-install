@@ -15,10 +15,12 @@
     <type name="Magento\Config\Model\Config">
         <plugin name="configPermissionChange" type="Magento\CatalogPermissions\Model\Indexer\Plugin\ConfigData" disabled="false" />
     </type>
-    <!--
     <type name="Magento\Framework\Mail\TransportInterface">  
       <plugin name="WindowsSmtpConfig" type="Magento\Email\Model\Plugin\WindowsSmtpConfig" disabled="false" />
       <plugin name="EmailDisable" type="Magento\Email\Model\Mail\TransportInterfacePlugin" disabled="false" />
+    </type> 
+    <type name="Magento\Catalog\Model\ResourceModel\Attribute">
+      <plugin name="catalogsearchFulltextIndexerAttribute" type="Magento\CatalogSearch\Model\Indexer\Fulltext\Plugin\Attribute" disabled="false" />
+      <plugin name="catalogsearchAttributeSearchWeightCache" type="Magento\CatalogSearch\Model\Attribute\SearchWeight" disabled="false" />
     </type>
-    -->
-  </config>
+</config> 
