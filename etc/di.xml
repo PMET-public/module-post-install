@@ -6,21 +6,18 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Magento\Eav\Model\Entity\Attribute\Set">
-        <plugin name="invalidateEavIndexerOnAttributeSetSave" type="Magento\Catalog\Model\Indexer\Product\Eav\Plugin\AttributeSet" disabled="false" />
+
+    <type name="Magento\ImportExport\Model\Import">
+        <plugin name="targetRuleImportInvalidate" type="Magento\TargetRule\Model\Indexer\TargetRule\Plugin\Import" disabled="false" />
     </type>
     <type name="Magento\Eav\Model\Entity\AbstractEntity">
         <plugin name="clean_cache" type="Magento\Framework\App\Cache\FlushCacheByTags" disabled="false" />
     </type>
-    <type name="Magento\Config\Model\Config">
-        <plugin name="configPermissionChange" type="Magento\CatalogPermissions\Model\Indexer\Plugin\ConfigData" disabled="false" />
+    <type name="Magento\Catalog\Model\Indexer\Category\Product\Action\Full">
+        <plugin name="invalidate_pagecache_after_full_reindex" type="Magento\Catalog\Plugin\Model\Indexer\Category\Product\Execute" disabled="false" />
     </type>
-    <type name="Magento\Framework\Mail\TransportInterface">  
-      <plugin name="WindowsSmtpConfig" type="Magento\Email\Model\Plugin\WindowsSmtpConfig" disabled="false" />
-      <plugin name="EmailDisable" type="Magento\Email\Model\Mail\TransportInterfacePlugin" disabled="false" />
-    </type> 
-    <type name="Magento\Catalog\Model\ResourceModel\Attribute">
-      <plugin name="catalogsearchFulltextIndexerAttribute" type="Magento\CatalogSearch\Model\Indexer\Fulltext\Plugin\Attribute" disabled="false" />
-      <plugin name="catalogsearchAttributeSearchWeightCache" type="Magento\CatalogSearch\Model\Attribute\SearchWeight" disabled="false" />
+    <type name="Magento\ImportExport\Model\Import">
+        <plugin name="catalogPermissionImport" type="Magento\CatalogPermissions\Model\Indexer\Plugin\Import" disabled="false" />
     </type>
-</config> 
+
+</config>
