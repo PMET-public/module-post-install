@@ -12,9 +12,6 @@
   <event name="model_save_after">
     <observer name="magento_logging" instance="Magento\Logging\Observer\ModelSaveAfterObserver" disabled="false" />
   </event>
-  <event name="clean_cache_by_tags">
-    <observer name="invalidate_varnish" instance="Magento\CacheInvalidate\Observer\InvalidateVarnishObserver" disabled="false"/>
-  </event>
   <event name="adminhtml_cache_flush_system">
     <observer name="flush_varnish_pagecache" instance="Magento\CacheInvalidate\Observer\FlushAllCacheObserver" disabled="false"/>
   </event>
